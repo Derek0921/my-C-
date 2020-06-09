@@ -1,0 +1,23 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int t,n;
+    int a[20];
+    cin>>t;
+    while(t--)
+    {
+      cin>>n;
+        for(int i=0;i<4;i++)
+            cin>>a[i];
+        for(int j=4;j<n;j++)
+            a[j]=a[j-4]+a[j-1];
+            sort(a,a+n);
+        int b=n/2;
+        cout<<a[b]<<endl;
+    }
+
+    return 0;
+}
