@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string n;
+
+    while(cin>>n)
+    {
+        int cnt=0;
+        int cnt1=0;
+        if(n=="0")
+         break;
+        for(int i=0;i<n.size();i++)
+        {
+            if(i%2==0)
+                cnt+=n[i]-'0';
+            else
+                cnt1+=n[i]-'0';
+
+        }
+        if((cnt-cnt1)%11==0)
+            cout<<n<<" "<<"is a multiple of 11."<<endl;
+        else
+            cout<<n<<" "<<"is not a multiple of 11."<<endl;
+    }
+    return 0;
+}
