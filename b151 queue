@@ -1,0 +1,30 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main()
+{
+    int n;
+    while(cin>>n)
+    {
+        priority_queue< int, deque<int>, greater<int> > pq;
+        for(int i=0;i<n;i++)
+        {
+            int a;
+            cin>>a;
+            pq.push(a);
+        }
+        int g1,g2,sum=0;
+while(pq.size()>1)
+        {g1=pq.top();
+        pq.pop();
+        g2=pq.top();
+        pq.pop();
+        pq.push(g1+g2);
+        sum+=(g1+g2);
+
+        }
+         cout<<sum<<endl;
+    }
+        return 0;
+}
