@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string s,s1;
+    int a;
+    while(cin>>s>>s1)
+    {
+        a=(s1[0]-s[0]+26)%26;
+        cout<<a<<endl;
+
+    }
+
+
+    return 0;
+}
