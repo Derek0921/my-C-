@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    struct rec
+    {
+        string name;
+        int v;
+    }web[10];
+    int t,cnt=1;
+    cin>>t;
+    while(t--)
+    {
+        int maxx=0;
+       for(int i=0;i<10;i++)
+       {
+           cin>>web[i].name>>web[i].v;
+           maxx=max(maxx,web[i].v);
+       }
+       cout<<"Case #"<<cnt++<<":"<<endl;
+       for(int i=0;i<10;i++)
+       {
+           if(web[i].v==maxx)
+           cout<<web[i].name<<endl;
+       }
+    }
+
+    return 0;
+}
