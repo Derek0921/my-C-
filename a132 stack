@@ -1,0 +1,27 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main()
+{
+    int n;
+    while(cin>>n&&n!=0)
+    {
+        int p=0;
+        stack<int>sk;
+        while(n>0)
+        {
+        sk.push(n&1);//n%2
+        p+=n&1;
+        n>>=1;//n/=2
+        }
+        cout<<"The parity of ";
+        while(!sk.empty())
+        {
+           cout<<sk.top();
+           sk.pop();
+        }
+        cout<<" is "<<p<<" (mod 2)."<<endl;
+    }
+    return 0;
+}
