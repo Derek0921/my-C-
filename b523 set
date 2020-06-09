@@ -1,0 +1,19 @@
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    set<string>s;
+    string line;
+
+    while(getline(cin,line))
+    {
+        cout<<(s.find(line)!=s.end()? "YES":"NO")<<endl;
+        s.insert(line);
+
+    }
+    return 0;
+
+}
